@@ -29,17 +29,17 @@
             android:id="@+id/nameET"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_weight="1"
             android:hint="Введите имя"
-            android:textSize="18sp"
-            android:layout_weight="1"/>
+            android:textSize="18sp" />
 
         <EditText
             android:id="@+id/ageET"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_weight="1"
             android:hint="Введите возраст"
-            android:textSize="18sp"
-            android:layout_weight="1"/>
+            android:textSize="18sp" />
 
     </LinearLayout>
 
@@ -53,16 +53,22 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/linerLayput"
-        app:layout_constraintVertical_bias=".1"/>
+        app:layout_constraintVertical_bias=".1" />
 
     <ListView
         android:id="@+id/listView"
         android:layout_width="match_parent"
         android:layout_height="470dp"
-        tools:ignore="MissingConstraints"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/saveBTN"
-        app:layout_constraintBottom_toBottomOf="parent"/>
+        tools:ignore="MissingConstraints" />
 
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_begin="20dp" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
